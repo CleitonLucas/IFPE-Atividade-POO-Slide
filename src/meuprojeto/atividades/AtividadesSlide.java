@@ -35,6 +35,8 @@ public class AtividadesSlide {
 			System.err.println("Opção inválida ! Reinicie o programa");
 			break;
 		}
+		
+		sc.close();
 	}
 	
 	//Podem ser acessadas de qualquer lugar, seja de dentro da mesma classe, de outras classes do mesmo pacote, ou até de classes externas em outros pacotes.
@@ -67,6 +69,8 @@ public class AtividadesSlide {
 			System.out.println("O seu IMC é: " + imc + ", você esta com obesidade mórbida");
 		}
 		
+		sc2.close();
+		
 	}
 	
 	//Só podem ser acessadas dentro da própria classe onde foram definidas. Nenhuma outra classe, nem mesmo subclasses, tem acesso a esses métodos.
@@ -87,7 +91,7 @@ public class AtividadesSlide {
 		System.out.print("Por último, digite seu sexo, sendo 'M' (masculino) ou 'F' (feminino): ");
 		sexo = sc3.next();
 		
-		if(sexo == "M") {
+		if(sexo.equals("M")) {
 			if((idade <= 18) && (idade < 30)) {
 				metaBasal = (15.057 * peso) + 679;
 				System.out.println("Seu metabolismo basal é de " + metaBasal + " cal/dia");
@@ -98,7 +102,7 @@ public class AtividadesSlide {
 				metaBasal = (13.5 * peso) + 487;
 				System.out.println("Seu metabolismo basal é de " + metaBasal + " cal/dia");
 			}
-		}else if(sexo == "F"){
+		}else if(sexo.equals("F")){
 			if((idade <= 18) && (idade < 30)) {
 				metaBasal = (14.7 * peso) + 486.6;
 				System.out.println("Seu metabolismo basal é de " + metaBasal + " cal/dia");
@@ -112,6 +116,8 @@ public class AtividadesSlide {
 		}else {
 			System.err.println("Sexualidade informada inválida ! verifique a opção escolhida, lembre-se utilize letras maiúculas");
 		}
+		
+		sc3.close();
 		
 	}
 	
@@ -133,6 +139,7 @@ public class AtividadesSlide {
 			System.err.println("Este número não é um inteiro !");
 		}
 		
+		sc4.close();
 	}
 	
 }
